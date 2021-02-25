@@ -1,14 +1,60 @@
 .app-container {
-  background-color: #282c34;
   min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* font-size: calc(10px + 2vmin); */
+
+  background-color: #282c34;
   color: white;
+  font-size: calc(10px + .5vmin);
 }
 
 #quote-box {
-  border: 1px solid red;
+  height: 25rem;
+  width: 50rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  border: 5px solid #1b63ff;
+  background-color: #eee;
+  color: #111;
+}
+
+.button {
+  min-width: 12rem;
+  min-height: 2rem;
+  margin-bottom: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #1b63ff;
+  color: #eee;
+  font-size: 1rem !important;
+  text-decoration: none;
+  border: none;
+  border-radius: .5rem;
+}
+
+.button:active {
+  color: red;
+}
+
+.button-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#author {
+  align-self: flex-end;
 }

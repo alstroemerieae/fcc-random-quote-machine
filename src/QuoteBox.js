@@ -16,8 +16,8 @@ const  QuoteBox= () => {
       .then(data => {
         let randomNumber = Math.floor(Math.random() * data.quotes.length)
         setQuotes(quotes)
-        setQuoteText(data.quotes[randomNumber].author)
-        setQuoteAuthor(data.quotes[randomNumber].quote)
+        setQuoteText(data.quotes[randomNumber].quote)
+        setQuoteAuthor(data.quotes[randomNumber].author)
         console.log(`The random generated number is ${randomNumber}`)
         console.log(`The length of the quotes array is ${data.quotes.length}`)
         console.log(`The current quote text is ${quoteText}`)
@@ -28,10 +28,12 @@ const  QuoteBox= () => {
 
   return (
     <div id="quote-box">
-      <h1 id="text">{quoteText}</h1>
       <h1 id="author">{quoteAuthor}</h1>
-      <button id="new-quote" onClick={() => setFetchCounter(fetchCounter + 1)}>Get New Quote</button>
-      <a id="tweet-quote" target="_blank" rel="noreferrer" href={tweetURL}>Tweet Quote</a>
+      <h1 id="text">{quoteText}</h1>
+      <div className="button-group">
+        <button id="new-quote" className="button" onClick={() => setFetchCounter(fetchCounter + 1)}>Get New Quote</button>
+        <a id="tweet-quote" className="button" target="_blank" rel="noreferrer" href={tweetURL}>Tweet Quote</a>
+      </div>
     </div>
   );
 }
